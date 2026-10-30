@@ -68,7 +68,7 @@ func server_spawn_pellets(origin_transform: Transform3D, shooter_path: NodePath 
 		get_tree().current_scene.add_child(bullet)
 		bullet.global_transform = origin_transform
 		
-		# Pass the player who fired this bullet so the bullet knows who to ignore!
+		# Pass the player who fired this bullet so the bullet knows who to ignore
 		var shooter = get_node_or_null(shooter_path) if shooter_path != NodePath() else null
 		if shooter and "shooter" in bullet:
 			bullet.shooter = shooter
